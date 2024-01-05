@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>委托 on Tang2233&#39;s Blog</title>
+    <link>https://tang2233.github.io/tags/%E5%A7%94%E6%89%98/</link>
+    <description>Recent content in 委托 on Tang2233&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Fri, 05 Jan 2024 15:13:12 +0800</lastBuildDate><atom:link href="https://tang2233.github.io/tags/%E5%A7%94%E6%89%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSharp委托与事件</title>
+      <link>https://tang2233.github.io/posts/csharp%E5%A7%94%E6%89%98%E4%B8%8E%E4%BA%8B%E4%BB%B6/</link>
+      <pubDate>Fri, 05 Jan 2024 15:13:12 +0800</pubDate>
+      
+      <guid>https://tang2233.github.io/posts/csharp%E5%A7%94%E6%89%98%E4%B8%8E%E4%BA%8B%E4%BB%B6/</guid>
+      <description>C # 委托 委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实例与任何具有兼容签名和返回类型的方法相关联。 你可以通过委托实例调用方法。 特点： 委托类似于 C++函数指针，但与指针不同的是，委托是完全面向对象的，是安全的数据类型。 委托允许将方法作</description>
+    </item>
+    
+  </channel>
+</rss>
