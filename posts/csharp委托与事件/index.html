@@ -7,7 +7,7 @@
 <meta name="robots" content="index, follow">
 <title>CSharp委托与事件 | Tang2233&#39;s Blog</title>
 <meta name="keywords" content="委托, 事件">
-<meta name="description" content="C # 委托 委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实例与任何具有兼容签名和返回类型的方法相关联。 你可以通过委托实例调用方法。 特点： 委托类似于 C&#43;&#43;函数指针，但与指针不同的是，委托是完全面向对象的，是安全的数据类型。 委托允许将方法作">
+<meta name="description" content="C# 委托 委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实">
 <meta name="author" content="Tang2233">
 <link rel="canonical" href="https://tang2233.github.io/posts/csharp%E5%A7%94%E6%89%98%E4%B8%8E%E4%BA%8B%E4%BB%B6/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
@@ -74,7 +74,7 @@ var _hmt = _hmt || [];
 })();
 </script>
 <meta property="og:title" content="CSharp委托与事件" />
-<meta property="og:description" content="C # 委托 委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实例与任何具有兼容签名和返回类型的方法相关联。 你可以通过委托实例调用方法。 特点： 委托类似于 C&#43;&#43;函数指针，但与指针不同的是，委托是完全面向对象的，是安全的数据类型。 委托允许将方法作" />
+<meta property="og:description" content="C# 委托 委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://tang2233.github.io/posts/csharp%E5%A7%94%E6%89%98%E4%B8%8E%E4%BA%8B%E4%BB%B6/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-01-05T15:13:12+08:00" />
@@ -82,7 +82,7 @@ var _hmt = _hmt || [];
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="CSharp委托与事件"/>
-<meta name="twitter:description" content="C # 委托 委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实例与任何具有兼容签名和返回类型的方法相关联。 你可以通过委托实例调用方法。 特点： 委托类似于 C&#43;&#43;函数指针，但与指针不同的是，委托是完全面向对象的，是安全的数据类型。 委托允许将方法作"/>
+<meta name="twitter:description" content="C# 委托 委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实"/>
 
 
 <script type="application/ld+json">
@@ -112,12 +112,12 @@ var _hmt = _hmt || [];
   "@type": "BlogPosting",
   "headline": "CSharp委托与事件",
   "name": "CSharp委托与事件",
-  "description": "C # 委托 委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实例与任何具有兼容签名和返回类型的方法相关联。 你可以通过委托实例调用方法。 特点： 委托类似于 C++函数指针，但与指针不同的是，委托是完全面向对象的，是安全的数据类型。 委托允许将方法作",
+  "description": "C# 委托 委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实",
   "keywords": [
     "委托", "事件"
   ],
-  "articleBody": "C # 委托 委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实例与任何具有兼容签名和返回类型的方法相关联。 你可以通过委托实例调用方法。\n特点： 委托类似于 C++函数指针，但与指针不同的是，委托是完全面向对象的，是安全的数据类型。 委托允许将方法作为参数进行传递。 委托可用于定义回调方法。 委托可以把多个方法链接在一起。这样，在事件触发时可同时启动多个事件处理程序。 委托签名不需要与方法精确匹配。 C# 四种委托的异同？ delegate ,至少 0 个参数，至多 32 个参数，可以无返回值，可以指定返回值类型。 Action ,至少 0 个参数，无返回值的泛型委托。 Func ,至少 0 个参数，至多 16 个参数，必须有返回值的泛型委托。 Predicate ,有且只有一个参数，返回值只为 bool 类型。 // 声明委托 public delegate void MyDelegate(string message); // 使用委托 public void UseDelegate() { MyDelegate del = new MyDelegate(Method); del(\"Hello World\"); } // 被委托引用的方法 public void Method(string message) { Console.WriteLine(message); } 参考文章\n1委托（C# 编程指南）\n2C#四种委托的区别\nC# 事件 类或对象可以通过事件向其他类或对象通知发生的相关事情。发送（或引发）事件的类称为“发布者”，接收（或处理）事件的类称为“订阅者”。事件是一种特殊的委托。\n// 声明事件 public event MyDelegate MyEvent; // 触发事件 public void TriggerEvent() { MyEvent?.Invoke(\"Event triggered\"); } // 订阅事件 public void Subscribe() { MyEvent += Method; } // 取消订阅 public void Unsubscribe() { MyEvent -= Method; } ",
-  "wordCount" : "516",
+  "articleBody": "C# 委托 委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实例与任何具有兼容签名和返回类型的方法相关联。 你可以通过委托实例调用方法。\n特点： 委托类似于 C++函数指针，但与指针不同的是，委托是完全面向对象的，是安全的数据类型。 委托允许将方法作为参数进行传递。 委托可用于定义回调方法。 委托可以把多个方法链接在一起。这样，在事件触发时可同时启动多个事件处理程序。 委托签名不需要与方法精确匹配。 C# 四种委托的异同？ delegate ,至少 0 个参数，至多 32 个参数，可以无返回值，可以指定返回值类型。 Action ,至少 0 个参数，无返回值的泛型委托。 Func ,至少 0 个参数，至多 16 个参数，必须有返回值的泛型委托。 Predicate ,有且只有一个参数，返回值只为 bool 类型。 // 声明委托 public delegate void MyDelegate(string message); // 使用委托 public void UseDelegate() { MyDelegate del = new MyDelegate(Method); del(\"Hello World\"); } // 被委托引用的方法 public void Method(string message) { Console.WriteLine(message); } 参考文章\n1委托（C# 编程指南）\n2C#四种委托的区别\nC# 事件 类或对象可以通过事件向其他类或对象通知发生的相关事情。发送（或引发）事件的类称为“发布者”，接收（或处理）事件的类称为“订阅者”。事件是一种特殊的委托。\n// 声明事件 public event MyDelegate MyEvent; // 触发事件 public void TriggerEvent() { MyEvent?.Invoke(\"Event triggered\"); } // 订阅事件 public void Subscribe() { MyEvent += Method; } // 取消订阅 public void Unsubscribe() { MyEvent -= Method; } ",
+  "wordCount" : "515",
   "inLanguage": "zh",
   "datePublished": "2024-01-05T15:13:12+08:00",
   "dateModified": "2024-01-05T15:13:12+08:00",
@@ -277,7 +277,7 @@ var _hmt = _hmt || [];
     
     <span id="post_meta_style_3">
         <span class="fa fa-file-word-o"></span>
-        <span>516字
+        <span>515字
             &nbsp;&nbsp;
         </span>
     </span>
@@ -360,7 +360,7 @@ var _hmt = _hmt || [];
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#c--%e5%a7%94%e6%89%98" aria-label="C # 委托">C # 委托</a><ul>
+                    <a href="#c-%e5%a7%94%e6%89%98" aria-label="C# 委托">C# 委托</a><ul>
                         
                 <li>
                     <a href="#%e7%89%b9%e7%82%b9" aria-label="特点：">特点：</a></li>
@@ -435,7 +435,7 @@ var _hmt = _hmt || [];
         return rect.top + win.pageYOffset;
     }
 </script>
-        <div class="post-content"><h1 id="c--委托">C # 委托<a hidden class="anchor" aria-hidden="true" href="#c--委托">#</a></h1>
+        <div class="post-content"><h1 id="c-委托">C# 委托<a hidden class="anchor" aria-hidden="true" href="#c-委托">#</a></h1>
 <p>委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实例与任何具有兼容签名和返回类型的方法相关联。 你可以通过委托实例调用方法。</p>
 <h2 id="特点">特点：<a hidden class="anchor" aria-hidden="true" href="#特点">#</a></h2>
 <ol>

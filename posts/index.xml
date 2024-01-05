@@ -13,7 +13,7 @@
       <pubDate>Fri, 05 Jan 2024 15:13:12 +0800</pubDate>
       
       <guid>https://tang2233.github.io/posts/csharp%E5%A7%94%E6%89%98%E4%B8%8E%E4%BA%8B%E4%BB%B6/</guid>
-      <description>C # 委托 委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实例与任何具有兼容签名和返回类型的方法相关联。 你可以通过委托实例调用方法。 特点： 委托类似于 C++函数指针，但与指针不同的是，委托是完全面向对象的，是安全的数据类型。 委托允许将方法作</description>
+      <description>C# 委托 委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实</description>
     </item>
     
     <item>
@@ -22,7 +22,7 @@
       <pubDate>Fri, 05 Jan 2024 14:54:46 +0800</pubDate>
       
       <guid>https://tang2233.github.io/posts/csharp%E5%85%B3%E9%94%AE%E5%AD%97/</guid>
-      <description>C# 访问修饰符 访问修饰符的作用 访问修饰符是用于指定成员或类型的声明可访问性的关键字。 四种常见的访问修饰符 public（公共的） protected（受保护的） internal（内部的） private（私有的） 访问修饰符的六种组合及其可访问性级别 public 访问不受限制 protected 访问限于包含类或派生自包</description>
+      <description>C# 访问修饰符 访问修饰符的作用 访问修饰符是用于指定成员或类型的声明可访问性的关键字。 四种常见的访问修饰</description>
     </item>
     
     <item>
@@ -31,7 +31,7 @@
       <pubDate>Fri, 05 Jan 2024 13:57:25 +0800</pubDate>
       
       <guid>https://tang2233.github.io/posts/lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
-      <description>Lambda 表达式是一种简洁的函数表示方式，它可以包含表达式和语句。Lambda 表达式使用=&amp;gt;运算符，该运算符读作“goes to”。 基本语法 Lambda 表达式的基本语法如下： (parameters) =&amp;gt; expression-or-statement-block 例如，以下是一个简单的 Lambda 表达式： x =&amp;gt; x * x 这个表达式表示一个接受一个整数参数并返回其平方的函数。 使用 Lambda 表达式 你可以</description>
+      <description>Lambda 表达式是一种简洁的函数表示方式，它可以包含表达式和语句。Lambda 表达式使用=&amp;gt;运算符，该</description>
     </item>
     
   </channel>

@@ -13,7 +13,7 @@
       <pubDate>Fri, 05 Jan 2024 14:54:46 +0800</pubDate>
       
       <guid>https://tang2233.github.io/posts/csharp%E5%85%B3%E9%94%AE%E5%AD%97/</guid>
-      <description>C# 访问修饰符 访问修饰符的作用 访问修饰符是用于指定成员或类型的声明可访问性的关键字。 四种常见的访问修饰符 public（公共的） protected（受保护的） internal（内部的） private（私有的） 访问修饰符的六种组合及其可访问性级别 public 访问不受限制 protected 访问限于包含类或派生自包</description>
+      <description>C# 访问修饰符 访问修饰符的作用 访问修饰符是用于指定成员或类型的声明可访问性的关键字。 四种常见的访问修饰</description>
     </item>
     
   </channel>

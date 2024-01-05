@@ -13,7 +13,7 @@
       <pubDate>Fri, 05 Jan 2024 13:57:25 +0800</pubDate>
       
       <guid>https://tang2233.github.io/posts/lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
-      <description>Lambda 表达式是一种简洁的函数表示方式，它可以包含表达式和语句。Lambda 表达式使用=&amp;gt;运算符，该运算符读作“goes to”。 基本语法 Lambda 表达式的基本语法如下： (parameters) =&amp;gt; expression-or-statement-block 例如，以下是一个简单的 Lambda 表达式： x =&amp;gt; x * x 这个表达式表示一个接受一个整数参数并返回其平方的函数。 使用 Lambda 表达式 你可以</description>
+      <description>Lambda 表达式是一种简洁的函数表示方式，它可以包含表达式和语句。Lambda 表达式使用=&amp;gt;运算符，该</description>
     </item>
     
   </channel>

@@ -13,7 +13,7 @@
       <pubDate>Fri, 05 Jan 2024 15:13:12 +0800</pubDate>
       
       <guid>https://tang2233.github.io/posts/csharp%E5%A7%94%E6%89%98%E4%B8%8E%E4%BA%8B%E4%BB%B6/</guid>
-      <description>C # 委托 委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实例与任何具有兼容签名和返回类型的方法相关联。 你可以通过委托实例调用方法。 特点： 委托类似于 C++函数指针，但与指针不同的是，委托是完全面向对象的，是安全的数据类型。 委托允许将方法作</description>
+      <description>C# 委托 委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实</description>
     </item>
     
   </channel>
