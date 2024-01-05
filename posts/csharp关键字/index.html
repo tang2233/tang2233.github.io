@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="zh" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>CSharp关键字 | Tang2233&#39;s Blog</title>
+<meta name="keywords" content="关键字">
+<meta name="description" content="C# 访问修饰符 访问修饰符的作用 访问修饰符是用于指定成员或类型的声明可访问性的关键字。 四种常见的访问修饰符 public（公共的） protected（受保护的） internal（内部的） private（私有的） 访问修饰符的六种组合及其可访问性级别 public 访问不受限制 protected 访问限于包含类或派生自包">
+<meta name="author" content="Tang2233">
+<link rel="canonical" href="https://tang2233.github.io/posts/csharp%E5%85%B3%E9%94%AE%E5%AD%97/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.js" onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="https://tang2233.github.io/favicon/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://tang2233.github.io/favicon/favicon-16x16.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="https://tang2233.github.io/favicon/favicon-32x32.ico">
+<link rel="apple-touch-icon" href="https://tang2233.github.io/favicon/apple-touch-icon.png">
+<link rel="mask-icon" href="https://tang2233.github.io/favicon/apple-touch-icon.png">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+<script defer src="https://unpkg.com/mermaid@8.8.1/dist/mermaid.min.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.min.js"></script>
+
+
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = ""; 
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<meta property="og:title" content="CSharp关键字" />
+<meta property="og:description" content="C# 访问修饰符 访问修饰符的作用 访问修饰符是用于指定成员或类型的声明可访问性的关键字。 四种常见的访问修饰符 public（公共的） protected（受保护的） internal（内部的） private（私有的） 访问修饰符的六种组合及其可访问性级别 public 访问不受限制 protected 访问限于包含类或派生自包" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://tang2233.github.io/posts/csharp%E5%85%B3%E9%94%AE%E5%AD%97/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-01-05T14:54:46+08:00" />
+<meta property="article:modified_time" content="2024-01-05T14:54:46+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="CSharp关键字"/>
+<meta name="twitter:description" content="C# 访问修饰符 访问修饰符的作用 访问修饰符是用于指定成员或类型的声明可访问性的关键字。 四种常见的访问修饰符 public（公共的） protected（受保护的） internal（内部的） private（私有的） 访问修饰符的六种组合及其可访问性级别 public 访问不受限制 protected 访问限于包含类或派生自包"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+
+        {
+          "@type": "ListItem",
+          "position":  1 ,
+          "name": "Posts",
+          "item": "https://tang2233.github.io/posts/"
+        }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "CSharp关键字",
+      "item": "https://tang2233.github.io/posts/csharp%E5%85%B3%E9%94%AE%E5%AD%97/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "CSharp关键字",
+  "name": "CSharp关键字",
+  "description": "C# 访问修饰符 访问修饰符的作用 访问修饰符是用于指定成员或类型的声明可访问性的关键字。 四种常见的访问修饰符 public（公共的） protected（受保护的） internal（内部的） private（私有的） 访问修饰符的六种组合及其可访问性级别 public 访问不受限制 protected 访问限于包含类或派生自包",
+  "keywords": [
+    "关键字"
+  ],
+  "articleBody": "C# 访问修饰符 访问修饰符的作用 访问修饰符是用于指定成员或类型的声明可访问性的关键字。\n四种常见的访问修饰符 public（公共的） protected（受保护的） internal（内部的） private（私有的） 访问修饰符的六种组合及其可访问性级别 public 访问不受限制 protected 访问限于包含类或派生自包含类的类型 internal 访问限于当前程序集 private 访问限于包含类 protected internal 访问限于当前程序集或派生自包含类的类型访问 Private protected 访问限于包含类或当前程序集中包含类的派生类的类型访问 //包含类 public class BaseClass { private protected int myValue = 0; } //当前程序集中包含类的派生类 public class DerivedClass1 : BaseClass { void Access() { var baseObject = new BaseClass(); myValue = 5; } } C# 类和结构默认访问修饰符 Internal\nC# 适用于类和结构访问修饰符有哪些 public 或 internal\n类成员和结构成员的默认访问修饰符为 private\n结构成员（包括嵌套的类和结构）可以声明为 public、internal 或 private 注意：结构成员无法声明为 protected、protected internal 或 private protected，因为结构不支持继承。\n类成员（包括嵌套的类和结构）可以声明为 public、protected internal、protected、internal、private protected 或 private\n参考文章 访问修饰符（C# 参考） readonly 与 const 区别？ readonly 关键字（运行时常量）: 字段可以在声明或构造函数中初始化，常作为运行时常量使用。\nconst 关键字（编译时常量）： 字段只能在该字段的声明时初始化，常作为编译时常量使用过。\nvirtual 作用? 详情阅读：https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/keywords/virtual\nvirtual 关键字用于修改方法、属性、索引器或事件声明，并使它们可以在派生类中被重写（使用 override 关键字对虚方法重写）。 如下是虚方法声明和重写虚方法的示例：\n// 基类虚方法声明 class BaseClass { public virtual void Method1() { Console.WriteLine(\"Base - Method1\"); } public virtual void Method2() { Console.WriteLine(\"Base - Method2\"); } } class DerivedClass : BaseClass { // 重写基类中的虚方法 public override void Method1() { Console.WriteLine(\"Derived - Method1\"); } public new void Method2() { Console.WriteLine(\"Derived - Method2\"); } } override 作用？ 扩展或修改继承的方法、属性、索引器或事件的抽象或虚拟实现需要 override 修饰符。\nstatic 作用？ 详情阅读：https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/keywords/static\n使用 static 修饰符可声明属于类型本身而不是属于特定对象的静态成员。 static 修饰符可用于声明 static 类。 在类、接口和结构中，可以将 static 修饰符添加到字段、方法、属性、运算符、事件和构造函数。 static 修饰符不能用于索引器或终结器。\n静态类与非静态类的区别？ 静态类无法实例化（换句话说，无法使用 new 运算符创建类类型的变量。由于不存在任何实例变量，因此可以使用类名本身访问静态类的成员）。 静态构造函数只调用一次，在程序所驻留的应用程序域的生存期内，静态类会保留在内存中（即使用 Static 修饰的类，应用一旦启用静态类就会保留在内存中）。 静态类只包含静态成员。 不能包含实例构造函数。 静态类会进行密封，因此不能继承。它们不能继承自任何类（除了 Object）。静态类不能包含实例构造函数。但是，它们可以包含静态构造函数。 静态成员和非静态成员的区别？ 成员主要指的是：字段、方法、属性、运算符、事件和构造函数等。\n静态成员用 static 修饰符，非静态成员不需要。 静态成员属于类所有，非静态成员属于类的实例化对象所有。 静态方法里不能使用非静态成员，非静态方法可以使用静态成员。 每创建一个类的实例，都会在内存中为非静态成员新分配一块新的存储。 静态成员无论类创建多少个实例，在内存中只占同一块区域。 静态方法的使用场合 静态方法最适合工具类中方法的定义。 静态变量适合全局变量的定义。 静态方法和非静态方法区别（优/缺点）？ 优点 属于类级别的，不需要创建对象就可以直接使用。 全局唯一，内存中唯一，静态变量可以唯一标识某些状态。 在类加载时候初始化，常驻在内存中，调用快捷方便。 缺点 静态方法不能调用非静态的方法和变量。（非静态方法可以任意的调用静态方法/变量） 不可以使用 this 引用 static 方法或属性访问器。 sealed 关键字有什么作用？ sealed 关键字用于修饰类、方法或属性，表示该类或成员不可被继承或重写。如果一个类被声明为 sealed，其他类不能继承该类；如果一个方法或属性被声明为 sealed，其他类不能重写该方法或属性。\nthis 关键字有什么作用？ this 关键字表示当前对象的引用，可以用于访问当前对象的成员。它可以用来区分局部变量和实例变量、在构造函数中调用其他构造函数、传递当前对象给其他方法等。\nbase 关键字有什么作用？ base 关键字表示基类的引用，可以用于访问基类的成员。它可以用来在子类中调用基类的构造函数、调用基类的方法或属性等。\nsizeof 关键字有什么作用？ sizeof 运算符返回给定类型的变量所占用的字节数。 sizeof 运算符的参数必须是一个非托管类型的名称，或是一个限定为非托管类型的类型参数。\nlock 关键字有什么作用？ lock 关键字用于在多线程环境下对共享资源进行互斥访问。使用 lock 关键字可以将代码块标记为临界区，使得只有一个线程能够进入临界区执行代码。\nasync 和 await 关键字有什么作用？ async 和 await 关键字用于异步编程。通过使用 async 标记方法和 await 等待异步操作完成，可以实现在异步任务执行过程中不阻塞主线程。\ndelegate 关键字有什么作用？ delegate 关键字用于声明委托类型，即代表一个或多个方法的对象。使用 delegate 可以实现事件和回调机制，简化方法的调用和管理。\nusing 关键字的作用 1using 指令为命名空间创建别名，或导入在其他命名空间中定义的类型\n2using 语句定义一个范围，在此范围的末尾将释放对象资源，实现了 IDisposiable 的类在 using 中创建，using 结束后会自定调用该对象的 Dispose 方法，释放资源。\nC# 中的 in 关键字有什么作用？ in 关键字用于参数传递时，将参数按只读引用传递。使用 in 关键字可以提高性能，避免不必要的参数复制。\n在 C# 中，in 关键字用于将参数标记为输入参数。它告诉编译器在方法调用过程中不会修改该参数的值，并且可以通过引用传递避免对参数进行复制。这对于大型结构或对象参数非常有用，因为直接引用参数可以提高性能和内存效率。\nclass Program { static void Main(string[] args) { int x = 5; MultiplyByTwo(in x); Console.WriteLine(x); // 输出 5 } static void MultiplyByTwo(in int number) { // 无法修改 in 参数的值 // number *= 2; // 编译错误 // 仅能读取 in 参数的值 Console.WriteLine(number * 2); // 输出 10 } } C# 中的 ref 关键字有什么作用？ 参数在使用 ref 关键字进行引用传递时，必须在方法调用之前对其进行初始化。 ref 关键字既可以在进入方法之前初始化参数的值，也可以在方法内部对参数进行修改。 ref 参数在进入方法时保持原始值，并在方法结束后将值带回到调用处。 C# 中的 out 关键字有什么作用？ 参数在使用 out 关键字进行引用传递时，不需要在方法调用之前进行初始化。 out 关键字通常用于表示方法返回多个值的情况，或者用于修改方法外部的变量。 out 参数必须在方法内部进行初始化，并确保在方法结束前完成赋值操作。方法内部没有为 out 参数赋值的情况下，方法调用将会导致编译错误。 C#中参数传递 ref 与 out 的区别？ ref 指定此参数由引用传递，指定的参数在函数调用时必须先初始化（有进有出）。\nout 指定此参数由引用传递，指定的参数在进入函数时会清空参数值，因此该参数必须在调用函数内部进行初始化赋值操作（无进有出）。\n总结：\nref 和 out 都用于引用传递参数。 ref 参数在方法调用前必须被初始化，而 out 参数不需要。 ref 参数可以保留原始值并在方法内部进行修改，而 out 参数必须在方法内部进行初始化赋值。 不能将 in、ref 和 out 关键字用于以下几种方法 异步方法，通过使用 async 修饰符定义。 迭代器方法，包括 yield return 或 yield break 语句。 扩展方法的第一个参数不能有 in 修饰符，除非该参数是结构。 扩展方法的第一个参数，其中该参数是泛型类型（即使该类型被约束为结构。） as 和 is 的区别 is 只是做类型兼容判断，并不执行真正的类型转换。返回 true 或 false，不会返回 null，对象为 null 也会返回 fa as 运算符将表达式结果显式转换为给定的引用类型或可以为 null 值的类型。如果无法进行转换，则 as 运算符返回 null。 null。\n总结：as 模式的效率要比 is 模式的高，因为借助 is 进行类型转换的化，需要执行两次类型兼容检查。而 as 只需要做一次类型兼容，一次 null 检查，null 检查要比类型兼容检查快。 null 是什么类型？ null 关键字是表示不引用任何对象的空引用的文字值。 null 是引用类型变量的默认值。 普通值类型不能为 null，可为空的值类型除外。\nnew 关键字的作用？ 1 运算符：创建类型的新实例\n2 修饰符：可以显式隐藏从基类继承的成员。\n3 泛型约束：泛型约束定义，约束可使用的泛型类型。\nreturn、continue、break 的区别? return 结束整个方法，return 关键字并不是专门用于跳出循环的，return 的功能是结束一个方法。 一旦在循环体内执行到一个 return 语句，return 语句将会结束该方法，循环自然也随之结束。与 continue 和 break 不同的是，return 直接结束整个方法，不管这个 return 处于多少层循环之内。\ncontinue 结束本次循环，然后持续进行下一次循环。\nbreak break 用于完全结束一个循环，跳出循环体。不管是哪种循环，一旦在循环体中遇到 break，系统将完全结束循环，开始执行循环之后的代码。\n",
+  "wordCount" : "3612",
+  "inLanguage": "zh",
+  "datePublished": "2024-01-05T14:54:46+08:00",
+  "dateModified": "2024-01-05T14:54:46+08:00",
+  "author":[{
+    "@type": "Person",
+    "name": "Tang2233"
+  }],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://tang2233.github.io/posts/csharp%E5%85%B3%E9%94%AE%E5%AD%97/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Tang2233's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://tang2233.github.io/favicon/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    (function () {
+        let  arr,reg = new RegExp("(^| )"+"change-themes"+"=([^;]*)(;|$)");
+        if(arr = document.cookie.match(reg)) {
+        } else {
+            if (new Date().getHours() >= 19 || new Date().getHours() < 6) {
+                document.body.classList.add('dark');
+                localStorage.setItem("pref-theme", 'dark');
+            } else {
+                document.body.classList.remove('dark');
+                localStorage.setItem("pref-theme", 'light');
+            }
+        }
+    })()
+
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://tang2233.github.io/" accesskey="h" title="Tang2233&#39;s Blog (Alt + H)">
+            <img src="https://tang2233.github.io/img/avatar.png" alt="logo" aria-label="logo"
+                 height="35">Tang2233&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://tang2233.github.io/search" title="🔍 搜索 (Alt &#43; /)" accesskey=/>
+                <span>🔍 搜索</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://tang2233.github.io/categories" title="🗂️ 分类">
+                <span>🗂️ 分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://tang2233.github.io/tags" title="🏷️ 标签">
+                <span>🏷️ 标签</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://tang2233.github.io/archives/" title="🗓️ 时间轴">
+                <span>🗓️ 时间轴</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://tang2233.github.io/about" title="🙋🏻‍♂️ 关于">
+                <span>🙋🏻‍♂️ 关于</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://tang2233.github.io/links" title="🤝 友链">
+                <span>🤝 友链</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main page">
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+</style>
+
+<article class="post-single">
+    <div id="single-content">
+        <header class="post-header">
+            <div class="breadcrumbs"><a href="https://tang2233.github.io/">🏠 主页</a>&nbsp;»&nbsp;<a href="https://tang2233.github.io/posts/">Posts</a></div>
+            <h1 class="post-title">
+                CSharp关键字
+            </h1>
+            <div class="post-meta">
+
+<style>
+    i[id*="post_meta_style"] {
+        display: flex;
+        align-items: center;
+        margin: 0 0 10px 0;
+    }
+
+    .parent-post-meta {
+        display: flex;
+        flex-wrap: wrap;
+        opacity: 0.8;
+    }
+</style>
+
+<span class="parent-post-meta">
+    <span id="post_meta_style_1">
+        <span class="fa fa-calendar-check-o"></span>
+        <span>2024-01-05
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    
+    
+    
+    
+    
+    
+    
+    <span id="post_meta_style_3">
+        <span class="fa fa-file-word-o"></span>
+        <span>3612字
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_4">
+        <span class="fa fa-clock-o"></span>
+        <span>8分钟
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_5">
+        <span class="fa fa-user-o"></span>
+        <span>Tang2233
+            &nbsp;&nbsp;
+        </span>
+    </span>
+    <span id="post_meta_style_6">
+        <span class="fa fa-tags" style="opacity: 0.8"></span>
+        <span>
+            <span class="post-tags-meta">
+                <a href="https://tang2233.github.io/tags/%E5%85%B3%E9%94%AE%E5%AD%97/" style="color: var(--secondary)!important;">关键字</a>
+            </span>
+        </span>
+    </span>
+</span>
+<span style="opacity: 0.8;">
+                    <span id="post_meta_style_7">
+                        &nbsp;&nbsp;
+                        <span class="fa fa-eye" ></span>
+                        <span>
+                            <span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span>
+                            &nbsp;&nbsp;
+                        </span>
+                    </span>
+                    <span id="post_meta_style_8">
+                        <span class="fa fa-commenting-o"></span>
+                        <span>
+                            <script src="https://cdn.staticfile.org/twikoo/1.5.8/twikoo.all.min.js"></script>
+                            <script>
+                                let url = document.documentURI
+                                
+                                let dnsUrl = "https://tang2233.github.io/"
+                                let urlSplit = url.split(dnsUrl)
+                                let finalUrl = urlSplit[1]
+                                if (finalUrl[0] !== '/') {
+                                    finalUrl = '/'+finalUrl
+                                }
+                                twikoo.getCommentsCount({
+                                    envId:  null , 
+                                region:  null , 
+                                urls: [ 
+                                    
+                                    finalUrl,
+                                ],
+                                    includeReply: false 
+                                }).then(function (res) {
+                                    let count = res[0].count
+                                    const obj = document.getElementById("comment_count");
+                                    obj.innerText = count
+                                    
+                                    
+                                    
+                                }).catch(function (err) {
+                                    
+                                    console.error(err);
+                                });
+                            </script>
+                            <span id="comment_count"></span>
+                        </span>
+                    </span>
+                </span>
+
+</div>
+        </header> <aside id="toc-container" class="toc-container wide">
+    <div class="toc">
+        <details  open>
+        <summary accesskey="c" title="(Alt + C)">
+            <span class="details">目录</span>
+        </summary>
+
+        <div class="inner"><ul>
+                <li>
+                    <a href="#c-%e8%ae%bf%e9%97%ae%e4%bf%ae%e9%a5%b0%e7%ac%a6" aria-label="C# 访问修饰符">C# 访问修饰符</a><ul>
+                        
+                <li>
+                    <a href="#%e8%ae%bf%e9%97%ae%e4%bf%ae%e9%a5%b0%e7%ac%a6%e7%9a%84%e4%bd%9c%e7%94%a8" aria-label="访问修饰符的作用">访问修饰符的作用</a></li>
+                <li>
+                    <a href="#%e5%9b%9b%e7%a7%8d%e5%b8%b8%e8%a7%81%e7%9a%84%e8%ae%bf%e9%97%ae%e4%bf%ae%e9%a5%b0%e7%ac%a6" aria-label="四种常见的访问修饰符">四种常见的访问修饰符</a></li>
+                <li>
+                    <a href="#%e8%ae%bf%e9%97%ae%e4%bf%ae%e9%a5%b0%e7%ac%a6%e7%9a%84%e5%85%ad%e7%a7%8d%e7%bb%84%e5%90%88%e5%8f%8a%e5%85%b6%e5%8f%af%e8%ae%bf%e9%97%ae%e6%80%a7%e7%ba%a7%e5%88%ab" aria-label="访问修饰符的六种组合及其可访问性级别">访问修饰符的六种组合及其可访问性级别</a></li>
+                <li>
+                    <a href="#c-%e7%b1%bb%e5%92%8c%e7%bb%93%e6%9e%84%e9%bb%98%e8%ae%a4%e8%ae%bf%e9%97%ae%e4%bf%ae%e9%a5%b0%e7%ac%a6" aria-label="C# 类和结构默认访问修饰符">C# 类和结构默认访问修饰符</a></li>
+                <li>
+                    <a href="#c-%e9%80%82%e7%94%a8%e4%ba%8e%e7%b1%bb%e5%92%8c%e7%bb%93%e6%9e%84%e8%ae%bf%e9%97%ae%e4%bf%ae%e9%a5%b0%e7%ac%a6%e6%9c%89%e5%93%aa%e4%ba%9b" aria-label="C# 适用于类和结构访问修饰符有哪些">C# 适用于类和结构访问修饰符有哪些</a></li>
+                <li>
+                    <a href="#%e7%b1%bb%e6%88%90%e5%91%98%e5%92%8c%e7%bb%93%e6%9e%84%e6%88%90%e5%91%98%e7%9a%84%e9%bb%98%e8%ae%a4%e8%ae%bf%e9%97%ae%e4%bf%ae%e9%a5%b0%e7%ac%a6%e4%b8%ba" aria-label="类成员和结构成员的默认访问修饰符为">类成员和结构成员的默认访问修饰符为</a></li>
+                <li>
+                    <a href="#%e7%bb%93%e6%9e%84%e6%88%90%e5%91%98%e5%8c%85%e6%8b%ac%e5%b5%8c%e5%a5%97%e7%9a%84%e7%b1%bb%e5%92%8c%e7%bb%93%e6%9e%84%e5%8f%af%e4%bb%a5%e5%a3%b0%e6%98%8e%e4%b8%ba" aria-label="结构成员（包括嵌套的类和结构）可以声明为">结构成员（包括嵌套的类和结构）可以声明为</a></li>
+                <li>
+                    <a href="#%e7%b1%bb%e6%88%90%e5%91%98%e5%8c%85%e6%8b%ac%e5%b5%8c%e5%a5%97%e7%9a%84%e7%b1%bb%e5%92%8c%e7%bb%93%e6%9e%84%e5%8f%af%e4%bb%a5%e5%a3%b0%e6%98%8e%e4%b8%ba" aria-label="类成员（包括嵌套的类和结构）可以声明为">类成员（包括嵌套的类和结构）可以声明为</a></li>
+                <li>
+                    <a href="#%e5%8f%82%e8%80%83%e6%96%87%e7%ab%a0" aria-label="参考文章">参考文章</a></li></ul>
+                </li>
+                <li>
+                    <a href="#readonly-%e4%b8%8e-const-%e5%8c%ba%e5%88%ab" aria-label="readonly 与 const 区别？">readonly 与 const 区别？</a></li>
+                <li>
+                    <a href="#virtual-%e4%bd%9c%e7%94%a8" aria-label="virtual 作用?">virtual 作用?</a></li>
+                <li>
+                    <a href="#override-%e4%bd%9c%e7%94%a8" aria-label="override 作用？">override 作用？</a></li>
+                <li>
+                    <a href="#static-%e4%bd%9c%e7%94%a8" aria-label="static 作用？">static 作用？</a><ul>
+                        
+                <li>
+                    <a href="#%e9%9d%99%e6%80%81%e7%b1%bb%e4%b8%8e%e9%9d%9e%e9%9d%99%e6%80%81%e7%b1%bb%e7%9a%84%e5%8c%ba%e5%88%ab" aria-label="静态类与非静态类的区别？">静态类与非静态类的区别？</a></li>
+                <li>
+                    <a href="#%e9%9d%99%e6%80%81%e6%88%90%e5%91%98%e5%92%8c%e9%9d%9e%e9%9d%99%e6%80%81%e6%88%90%e5%91%98%e7%9a%84%e5%8c%ba%e5%88%ab" aria-label="静态成员和非静态成员的区别？">静态成员和非静态成员的区别？</a></li>
+                <li>
+                    <a href="#%e9%9d%99%e6%80%81%e6%96%b9%e6%b3%95%e7%9a%84%e4%bd%bf%e7%94%a8%e5%9c%ba%e5%90%88" aria-label="静态方法的使用场合">静态方法的使用场合</a></li>
+                <li>
+                    <a href="#%e9%9d%99%e6%80%81%e6%96%b9%e6%b3%95%e5%92%8c%e9%9d%9e%e9%9d%99%e6%80%81%e6%96%b9%e6%b3%95%e5%8c%ba%e5%88%ab%e4%bc%98%e7%bc%ba%e7%82%b9" aria-label="静态方法和非静态方法区别（优/缺点）？">静态方法和非静态方法区别（优/缺点）？</a><ul>
+                        
+                <li>
+                    <a href="#%e4%bc%98%e7%82%b9" aria-label="优点">优点</a></li>
+                <li>
+                    <a href="#%e7%bc%ba%e7%82%b9" aria-label="缺点">缺点</a></li></ul>
+                </li></ul>
+                </li>
+                <li>
+                    <a href="#sealed-%e5%85%b3%e9%94%ae%e5%ad%97%e6%9c%89%e4%bb%80%e4%b9%88%e4%bd%9c%e7%94%a8" aria-label="sealed 关键字有什么作用？">sealed 关键字有什么作用？</a></li>
+                <li>
+                    <a href="#this-%e5%85%b3%e9%94%ae%e5%ad%97%e6%9c%89%e4%bb%80%e4%b9%88%e4%bd%9c%e7%94%a8" aria-label="this 关键字有什么作用？">this 关键字有什么作用？</a></li>
+                <li>
+                    <a href="#base-%e5%85%b3%e9%94%ae%e5%ad%97%e6%9c%89%e4%bb%80%e4%b9%88%e4%bd%9c%e7%94%a8" aria-label="base 关键字有什么作用？">base 关键字有什么作用？</a></li>
+                <li>
+                    <a href="#sizeof-%e5%85%b3%e9%94%ae%e5%ad%97%e6%9c%89%e4%bb%80%e4%b9%88%e4%bd%9c%e7%94%a8" aria-label="sizeof 关键字有什么作用？">sizeof 关键字有什么作用？</a></li>
+                <li>
+                    <a href="#lock-%e5%85%b3%e9%94%ae%e5%ad%97%e6%9c%89%e4%bb%80%e4%b9%88%e4%bd%9c%e7%94%a8" aria-label="lock 关键字有什么作用？">lock 关键字有什么作用？</a></li>
+                <li>
+                    <a href="#async-%e5%92%8c-await-%e5%85%b3%e9%94%ae%e5%ad%97%e6%9c%89%e4%bb%80%e4%b9%88%e4%bd%9c%e7%94%a8" aria-label="async 和 await 关键字有什么作用？">async 和 await 关键字有什么作用？</a></li>
+                <li>
+                    <a href="#delegate-%e5%85%b3%e9%94%ae%e5%ad%97%e6%9c%89%e4%bb%80%e4%b9%88%e4%bd%9c%e7%94%a8" aria-label="delegate 关键字有什么作用？">delegate 关键字有什么作用？</a></li>
+                <li>
+                    <a href="#using-%e5%85%b3%e9%94%ae%e5%ad%97%e7%9a%84%e4%bd%9c%e7%94%a8" aria-label="using 关键字的作用">using 关键字的作用</a></li>
+                <li>
+                    <a href="#c-%e4%b8%ad%e7%9a%84-in-%e5%85%b3%e9%94%ae%e5%ad%97%e6%9c%89%e4%bb%80%e4%b9%88%e4%bd%9c%e7%94%a8" aria-label="C# 中的 in 关键字有什么作用？">C# 中的 in 关键字有什么作用？</a></li>
+                <li>
+                    <a href="#c-%e4%b8%ad%e7%9a%84-ref-%e5%85%b3%e9%94%ae%e5%ad%97%e6%9c%89%e4%bb%80%e4%b9%88%e4%bd%9c%e7%94%a8" aria-label="C# 中的 ref 关键字有什么作用？">C# 中的 ref 关键字有什么作用？</a></li>
+                <li>
+                    <a href="#c-%e4%b8%ad%e7%9a%84-out-%e5%85%b3%e9%94%ae%e5%ad%97%e6%9c%89%e4%bb%80%e4%b9%88%e4%bd%9c%e7%94%a8" aria-label="C# 中的 out 关键字有什么作用？">C# 中的 out 关键字有什么作用？</a></li>
+                <li>
+                    <a href="#c%e4%b8%ad%e5%8f%82%e6%95%b0%e4%bc%a0%e9%80%92-ref-%e4%b8%8e-out-%e7%9a%84%e5%8c%ba%e5%88%ab" aria-label="C#中参数传递 ref 与 out 的区别？">C#中参数传递 ref 与 out 的区别？</a></li>
+                <li>
+                    <a href="#%e4%b8%8d%e8%83%bd%e5%b0%86-inref-%e5%92%8c-out-%e5%85%b3%e9%94%ae%e5%ad%97%e7%94%a8%e4%ba%8e%e4%bb%a5%e4%b8%8b%e5%87%a0%e7%a7%8d%e6%96%b9%e6%b3%95" aria-label="不能将 in、ref 和 out 关键字用于以下几种方法">不能将 in、ref 和 out 关键字用于以下几种方法</a></li>
+                <li>
+                    <a href="#as-%e5%92%8c-is-%e7%9a%84%e5%8c%ba%e5%88%ab" aria-label="as 和 is 的区别">as 和 is 的区别</a></li>
+                <li>
+                    <a href="#null-%e6%98%af%e4%bb%80%e4%b9%88%e7%b1%bb%e5%9e%8b" aria-label="null 是什么类型？">null 是什么类型？</a></li>
+                <li>
+                    <a href="#new-%e5%85%b3%e9%94%ae%e5%ad%97%e7%9a%84%e4%bd%9c%e7%94%a8" aria-label="new 关键字的作用？">new 关键字的作用？</a></li>
+                <li>
+                    <a href="#returncontinuebreak-%e7%9a%84%e5%8c%ba%e5%88%ab" aria-label="return、continue、break 的区别?">return、continue、break 的区别?</a><ul>
+                        
+                <li>
+                    <a href="#return" aria-label="return">return</a></li>
+                <li>
+                    <a href="#continue" aria-label="continue">continue</a></li>
+                <li>
+                    <a href="#break" aria-label="break">break</a>
+                </li>
+            </ul>
+            </li>
+            </ul>
+        </div>
+        </details>
+    </div>
+</aside>
+<script>
+    let activeElement;
+    let elements;
+    window.addEventListener('DOMContentLoaded', function (event) {
+        checkTocPosition();
+
+        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
+        
+        activeElement = elements[0];
+        const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
+        document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+    }, false);
+
+    window.addEventListener('resize', function(event) {
+        checkTocPosition();
+    }, false);
+
+    window.addEventListener('scroll', () => {
+        
+        if (elements) {
+            activeElement = Array.from(elements).find((element) => {
+                if ((getOffsetTop(element) - window.pageYOffset) > 0 &&
+                    (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
+                    return element;
+                }
+            }) || activeElement
+
+            elements.forEach(element => {
+                const id = encodeURI(element.getAttribute('id')).toLowerCase();
+                if (element === activeElement){
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
+                } else {
+                    document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
+                }
+            })
+        }
+    }, false);
+
+    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
+    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
+    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
+
+    function checkTocPosition() {
+        const width = document.body.scrollWidth;
+        if (width - main - (toc * 2) - (gap * 4) > 0) {
+            document.getElementById("toc-container").classList.add("wide");
+        } else {
+            document.getElementById("toc-container").classList.remove("wide");
+        }
+    }
+
+    function getOffsetTop(element) {
+        if (!element.getClientRects().length) {
+            return 0;
+        }
+        let rect = element.getBoundingClientRect();
+        let win = element.ownerDocument.defaultView;
+        return rect.top + win.pageYOffset;
+    }
+</script>
+        <div class="post-content"><h1 id="c-访问修饰符">C# 访问修饰符<a hidden class="anchor" aria-hidden="true" href="#c-访问修饰符">#</a></h1>
+<h2 id="访问修饰符的作用">访问修饰符的作用<a hidden class="anchor" aria-hidden="true" href="#访问修饰符的作用">#</a></h2>
+<p>访问修饰符是用于指定成员或类型的声明可访问性的关键字。</p>
+<h2 id="四种常见的访问修饰符">四种常见的访问修饰符<a hidden class="anchor" aria-hidden="true" href="#四种常见的访问修饰符">#</a></h2>
+<ul>
+<li>public（公共的）</li>
+<li>protected（受保护的）</li>
+<li>internal（内部的）</li>
+<li>private（私有的）</li>
+</ul>
+<h2 id="访问修饰符的六种组合及其可访问性级别">访问修饰符的六种组合及其可访问性级别<a hidden class="anchor" aria-hidden="true" href="#访问修饰符的六种组合及其可访问性级别">#</a></h2>
+<ul>
+<li>public 访问不受限制</li>
+<li>protected 访问限于包含类或派生自包含类的类型</li>
+<li>internal 访问限于当前程序集</li>
+<li>private 访问限于包含类</li>
+<li>protected internal 访问限于当前程序集或派生自包含类的类型访问</li>
+<li>Private protected 访问限于包含类或当前程序集中包含类的派生类的类型访问</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">//包含类</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BaseClass</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">int</span> myValue = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//当前程序集中包含类的派生类</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DerivedClass1</span> : BaseClass
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">void</span> Access()
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">var</span> baseObject = <span style="color:#66d9ef">new</span> BaseClass();
+</span></span><span style="display:flex;"><span>		myValue = <span style="color:#ae81ff">5</span>;
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="c-类和结构默认访问修饰符">C# 类和结构默认访问修饰符<a hidden class="anchor" aria-hidden="true" href="#c-类和结构默认访问修饰符">#</a></h2>
+<blockquote>
+<p>Internal</p>
+</blockquote>
+<h2 id="c-适用于类和结构访问修饰符有哪些">C# 适用于类和结构访问修饰符有哪些<a hidden class="anchor" aria-hidden="true" href="#c-适用于类和结构访问修饰符有哪些">#</a></h2>
+<blockquote>
+<p>public 或 internal</p>
+</blockquote>
+<h2 id="类成员和结构成员的默认访问修饰符为">类成员和结构成员的默认访问修饰符为<a hidden class="anchor" aria-hidden="true" href="#类成员和结构成员的默认访问修饰符为">#</a></h2>
+<blockquote>
+<p>private</p>
+</blockquote>
+<h2 id="结构成员包括嵌套的类和结构可以声明为">结构成员（包括嵌套的类和结构）可以声明为<a hidden class="anchor" aria-hidden="true" href="#结构成员包括嵌套的类和结构可以声明为">#</a></h2>
+<blockquote>
+<p>public、internal 或 private 注意：结构成员无法声明为 protected、protected internal 或 private protected，因为结构不支持继承。</p>
+</blockquote>
+<h2 id="类成员包括嵌套的类和结构可以声明为">类成员（包括嵌套的类和结构）可以声明为<a hidden class="anchor" aria-hidden="true" href="#类成员包括嵌套的类和结构可以声明为">#</a></h2>
+<blockquote>
+<p>public、protected internal、protected、internal、private protected 或 private</p>
+</blockquote>
+<h2 id="参考文章">参考文章<a hidden class="anchor" aria-hidden="true" href="#参考文章">#</a></h2>
+<ol>
+<li><a href="https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/keywords/access-modifiers">访问修饰符（C# 参考）</a></li>
+</ol>
+<h1 id="readonly-与-const-区别">readonly 与 const 区别？<a hidden class="anchor" aria-hidden="true" href="#readonly-与-const-区别">#</a></h1>
+<p>readonly 关键字（运行时常量）: 字段可以在声明或构造函数中初始化，常作为运行时常量使用。<br>
+const 关键字（编译时常量）： 字段只能在该字段的声明时初始化，常作为编译时常量使用过。</p>
+<h1 id="virtual-作用">virtual 作用?<a hidden class="anchor" aria-hidden="true" href="#virtual-作用">#</a></h1>
+<blockquote>
+<p>详情阅读：<a href="https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/keywords/virtual">https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/keywords/virtual</a></p>
+</blockquote>
+<p>virtual 关键字用于修改方法、属性、索引器或事件声明，并使它们可以在派生类中被重写（使用 override 关键字对虚方法重写）。 如下是虚方法声明和重写虚方法的示例：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// 基类虚方法声明</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BaseClass</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> Method1()
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		Console.WriteLine(<span style="color:#e6db74">&#34;Base - Method1&#34;</span>);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">void</span> Method2()
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		Console.WriteLine(<span style="color:#e6db74">&#34;Base - Method2&#34;</span>);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DerivedClass</span> : BaseClass
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#75715e">// 重写基类中的虚方法</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">void</span> Method1()
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		Console.WriteLine(<span style="color:#e6db74">&#34;Derived - Method1&#34;</span>);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">void</span> Method2()
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		Console.WriteLine(<span style="color:#e6db74">&#34;Derived - Method2&#34;</span>);
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="override-作用">override 作用？<a hidden class="anchor" aria-hidden="true" href="#override-作用">#</a></h1>
+<p>扩展或修改继承的方法、属性、索引器或事件的抽象或虚拟实现需要 override 修饰符。</p>
+<h1 id="static-作用">static 作用？<a hidden class="anchor" aria-hidden="true" href="#static-作用">#</a></h1>
+<blockquote>
+<p>详情阅读：<a href="https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/keywords/static">https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/keywords/static</a></p>
+</blockquote>
+<p>使用 static 修饰符可声明属于类型本身而不是属于特定对象的静态成员。 static 修饰符可用于声明 static 类。 在类、接口和结构中，可以将 static 修饰符添加到字段、方法、属性、运算符、事件和构造函数。 static 修饰符不能用于索引器或终结器。</p>
+<h2 id="静态类与非静态类的区别">静态类与非静态类的区别？<a hidden class="anchor" aria-hidden="true" href="#静态类与非静态类的区别">#</a></h2>
+<ol>
+<li>静态类无法实例化（换句话说，无法使用 new 运算符创建类类型的变量。由于不存在任何实例变量，因此可以使用类名本身访问静态类的成员）。</li>
+<li>静态构造函数只调用一次，在程序所驻留的应用程序域的生存期内，静态类会保留在内存中（即使用 Static 修饰的类，应用一旦启用静态类就会保留在内存中）。</li>
+<li>静态类只包含静态成员。</li>
+<li>不能包含实例构造函数。</li>
+<li>静态类会进行密封，因此不能继承。它们不能继承自任何类（除了 Object）。静态类不能包含实例构造函数。但是，它们可以包含静态构造函数。</li>
+</ol>
+<h2 id="静态成员和非静态成员的区别">静态成员和非静态成员的区别？<a hidden class="anchor" aria-hidden="true" href="#静态成员和非静态成员的区别">#</a></h2>
+<blockquote>
+<p>成员主要指的是：字段、方法、属性、运算符、事件和构造函数等。</p>
+</blockquote>
+<ol>
+<li>静态成员用 static 修饰符，非静态成员不需要。</li>
+<li>静态成员属于类所有，非静态成员属于类的实例化对象所有。</li>
+<li>静态方法里不能使用非静态成员，非静态方法可以使用静态成员。</li>
+<li>每创建一个类的实例，都会在内存中为非静态成员新分配一块新的存储。</li>
+<li>静态成员无论类创建多少个实例，在内存中只占同一块区域。</li>
+</ol>
+<h2 id="静态方法的使用场合">静态方法的使用场合<a hidden class="anchor" aria-hidden="true" href="#静态方法的使用场合">#</a></h2>
+<ol>
+<li>静态方法最适合工具类中方法的定义。</li>
+<li>静态变量适合全局变量的定义。</li>
+</ol>
+<h2 id="静态方法和非静态方法区别优缺点">静态方法和非静态方法区别（优/缺点）？<a hidden class="anchor" aria-hidden="true" href="#静态方法和非静态方法区别优缺点">#</a></h2>
+<h3 id="优点">优点<a hidden class="anchor" aria-hidden="true" href="#优点">#</a></h3>
+<ol>
+<li>属于类级别的，不需要创建对象就可以直接使用。</li>
+<li>全局唯一，内存中唯一，静态变量可以唯一标识某些状态。</li>
+<li>在类加载时候初始化，常驻在内存中，调用快捷方便。</li>
+</ol>
+<h3 id="缺点">缺点<a hidden class="anchor" aria-hidden="true" href="#缺点">#</a></h3>
+<ol>
+<li>静态方法不能调用非静态的方法和变量。（<strong>非静态方法可以任意的调用静态方法/变量</strong>）</li>
+<li>不可以使用 this 引用 static 方法或属性访问器。</li>
+</ol>
+<h1 id="sealed-关键字有什么作用">sealed 关键字有什么作用？<a hidden class="anchor" aria-hidden="true" href="#sealed-关键字有什么作用">#</a></h1>
+<p>sealed 关键字用于修饰类、方法或属性，表示该类或成员不可被继承或重写。如果一个类被声明为 sealed，其他类不能继承该类；如果一个方法或属性被声明为 sealed，其他类不能重写该方法或属性。</p>
+<h1 id="this-关键字有什么作用">this 关键字有什么作用？<a hidden class="anchor" aria-hidden="true" href="#this-关键字有什么作用">#</a></h1>
+<p>this 关键字表示当前对象的引用，可以用于访问当前对象的成员。它可以用来区分局部变量和实例变量、在构造函数中调用其他构造函数、传递当前对象给其他方法等。</p>
+<h1 id="base-关键字有什么作用">base 关键字有什么作用？<a hidden class="anchor" aria-hidden="true" href="#base-关键字有什么作用">#</a></h1>
+<p>base 关键字表示基类的引用，可以用于访问基类的成员。它可以用来在子类中调用基类的构造函数、调用基类的方法或属性等。</p>
+<h1 id="sizeof-关键字有什么作用">sizeof 关键字有什么作用？<a hidden class="anchor" aria-hidden="true" href="#sizeof-关键字有什么作用">#</a></h1>
+<p>sizeof 运算符返回给定类型的变量所占用的字节数。 sizeof 运算符的参数必须是一个<a href="https://learn.microsoft.com/zh-cn/dotnet/csharp/language-reference/builtin-types/unmanaged-types">非托管类型</a>的名称，或是一个<a href="https://learn.microsoft.com/zh-cn/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters#unmanaged-constraint">限定</a>为非托管类型的类型参数。</p>
+<h1 id="lock-关键字有什么作用">lock 关键字有什么作用？<a hidden class="anchor" aria-hidden="true" href="#lock-关键字有什么作用">#</a></h1>
+<p>lock 关键字用于在多线程环境下对共享资源进行互斥访问。使用 lock 关键字可以将代码块标记为临界区，使得只有一个线程能够进入临界区执行代码。</p>
+<h1 id="async-和-await-关键字有什么作用">async 和 await 关键字有什么作用？<a hidden class="anchor" aria-hidden="true" href="#async-和-await-关键字有什么作用">#</a></h1>
+<p>async 和 await 关键字用于异步编程。通过使用 async 标记方法和 await 等待异步操作完成，可以实现在异步任务执行过程中不阻塞主线程。</p>
+<h1 id="delegate-关键字有什么作用">delegate 关键字有什么作用？<a hidden class="anchor" aria-hidden="true" href="#delegate-关键字有什么作用">#</a></h1>
+<p>delegate 关键字用于声明委托类型，即代表一个或多个方法的对象。使用 delegate 可以实现事件和回调机制，简化方法的调用和管理。</p>
+<h1 id="using-关键字的作用">using 关键字的作用<a hidden class="anchor" aria-hidden="true" href="#using-关键字的作用">#</a></h1>
+<p>1using 指令为命名空间创建别名，或导入在其他命名空间中定义的类型<br>
+2using 语句定义一个范围，在此范围的末尾将释放对象资源，实现了 IDisposiable 的类在 using 中创建，using 结束后会自定调用该对象的 Dispose 方法，释放资源。</p>
+<h1 id="c-中的-in-关键字有什么作用">C# 中的 in 关键字有什么作用？<a hidden class="anchor" aria-hidden="true" href="#c-中的-in-关键字有什么作用">#</a></h1>
+<p>in 关键字用于参数传递时，将参数按只读引用传递。使用 in 关键字可以提高性能，避免不必要的参数复制。</p>
+<blockquote>
+<p>在 C# 中，in 关键字用于将参数标记为输入参数。它告诉编译器在方法调用过程中不会修改该参数的值，并且可以通过引用传递避免对参数进行复制。这对于大型结构或对象参数非常有用，因为直接引用参数可以提高性能和内存效率。</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] args)
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">int</span> x = <span style="color:#ae81ff">5</span>;
+</span></span><span style="display:flex;"><span>		MultiplyByTwo(<span style="color:#66d9ef">in</span> x);
+</span></span><span style="display:flex;"><span>		Console.WriteLine(x); <span style="color:#75715e">// 输出 5</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> MultiplyByTwo(<span style="color:#66d9ef">in</span> <span style="color:#66d9ef">int</span> number)
+</span></span><span style="display:flex;"><span>	{
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 无法修改 in 参数的值</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// number *= 2; // 编译错误</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#75715e">// 仅能读取 in 参数的值</span>
+</span></span><span style="display:flex;"><span>		Console.WriteLine(number * <span style="color:#ae81ff">2</span>); <span style="color:#75715e">// 输出 10</span>
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h1 id="c-中的-ref-关键字有什么作用">C# 中的 ref 关键字有什么作用？<a hidden class="anchor" aria-hidden="true" href="#c-中的-ref-关键字有什么作用">#</a></h1>
+<ul>
+<li>参数在使用 ref 关键字进行引用传递时，必须在方法调用之前对其进行初始化。</li>
+<li>ref 关键字既可以在进入方法之前初始化参数的值，也可以在方法内部对参数进行修改。</li>
+<li>ref 参数在进入方法时保持原始值，并在方法结束后将值带回到调用处。</li>
+</ul>
+<h1 id="c-中的-out-关键字有什么作用">C# 中的 out 关键字有什么作用？<a hidden class="anchor" aria-hidden="true" href="#c-中的-out-关键字有什么作用">#</a></h1>
+<ul>
+<li>参数在使用 out 关键字进行引用传递时，不需要在方法调用之前进行初始化。</li>
+<li>out 关键字通常用于表示方法返回多个值的情况，或者用于修改方法外部的变量。</li>
+<li>out 参数必须在方法内部进行初始化，并确保在方法结束前完成赋值操作。方法内部没有为 out 参数赋值的情况下，方法调用将会导致编译错误。</li>
+</ul>
+<h1 id="c中参数传递-ref-与-out-的区别">C#中参数传递 ref 与 out 的区别？<a hidden class="anchor" aria-hidden="true" href="#c中参数传递-ref-与-out-的区别">#</a></h1>
+<p>ref 指定此参数由引用传递，指定的参数在函数调用时必须先初始化（有进有出）。<br>
+out 指定此参数由引用传递，指定的参数在进入函数时会清空参数值，因此该参数必须在调用函数内部进行初始化赋值操作（无进有出）。</p>
+<p><strong>总结</strong>：</p>
+<ul>
+<li>ref 和 out 都用于引用传递参数。</li>
+<li>ref 参数在方法调用前必须被初始化，而 out 参数不需要。</li>
+<li>ref 参数可以保留原始值并在方法内部进行修改，而 out 参数必须在方法内部进行初始化赋值。</li>
+</ul>
+<h1 id="不能将-inref-和-out-关键字用于以下几种方法">不能将 in、ref 和 out 关键字用于以下几种方法<a hidden class="anchor" aria-hidden="true" href="#不能将-inref-和-out-关键字用于以下几种方法">#</a></h1>
+<ul>
+<li>异步方法，通过使用 async 修饰符定义。</li>
+<li>迭代器方法，包括 yield return 或 yield break 语句。</li>
+<li>扩展方法的第一个参数不能有 in 修饰符，除非该参数是结构。</li>
+<li>扩展方法的第一个参数，其中该参数是泛型类型（即使该类型被约束为结构。）</li>
+</ul>
+<h1 id="as-和-is-的区别">as 和 is 的区别<a hidden class="anchor" aria-hidden="true" href="#as-和-is-的区别">#</a></h1>
+<ol>
+<li>is 只是做类型兼容判断，并不执行真正的类型转换。返回 true 或 false，不会返回 null，对象为 null 也会返回 fa</li>
+<li>as 运算符将表达式结果显式转换为给定的引用类型或可以为 null 值的类型。如果无法进行转换，则 as 运算符返回 null。 null。<br>
+总结：as 模式的效率要比 is 模式的高，因为借助 is 进行类型转换的化，需要执行两次类型兼容检查。而 as 只需要做一次类型兼容，一次 null 检查，null 检查要比类型兼容检查快。</li>
+</ol>
+<h1 id="null-是什么类型">null 是什么类型？<a hidden class="anchor" aria-hidden="true" href="#null-是什么类型">#</a></h1>
+<p>null 关键字是表示不引用任何对象的空引用的文字值。 null 是引用类型变量的默认值。 普通值类型不能为 null，<a href="https://docs.microsoft.com/zh-cn/dotnet/csharp/language-reference/builtin-types/nullable-value-types">可为空的值类型</a>除外。</p>
+<h1 id="new-关键字的作用">new 关键字的作用？<a hidden class="anchor" aria-hidden="true" href="#new-关键字的作用">#</a></h1>
+<p>1 运算符：创建类型的新实例<br>
+2 修饰符：可以显式隐藏从基类继承的成员。<br>
+3 泛型约束：泛型约束定义，约束可使用的泛型类型。</p>
+<h1 id="returncontinuebreak-的区别">return、continue、break 的区别?<a hidden class="anchor" aria-hidden="true" href="#returncontinuebreak-的区别">#</a></h1>
+<h2 id="return">return<a hidden class="anchor" aria-hidden="true" href="#return">#</a></h2>
+<p>结束整个方法，return 关键字并不是专门用于跳出循环的，return 的功能是结束一个方法。 一旦在循环体内执行到一个 return 语句，return 语句将会结束该方法，循环自然也随之结束。与 continue 和 break 不同的是，return 直接结束整个方法，不管这个 return 处于多少层循环之内。</p>
+<h2 id="continue">continue<a hidden class="anchor" aria-hidden="true" href="#continue">#</a></h2>
+<p>结束本次循环，然后持续进行下一次循环。</p>
+<h2 id="break">break<a hidden class="anchor" aria-hidden="true" href="#break">#</a></h2>
+<p>break 用于完全结束一个循环，跳出循环体。不管是哪种循环，一旦在循环体中遇到 break，系统将完全结束循环，开始执行循环之后的代码。</p>
+
+
+        </div>
+        <div class="post-reward">
+            <div style="padding: 0 0 0 0; margin: 0 0 0 0; width: 100%; font-size:16px; text-align: center;">
+                <div id="QR" style="opacity: 0;">
+                    <div id="wechat" style="display: inline-block">
+                        <a class="fancybox" rel="group">
+                            <img id="wechat_qr" src="https://tang2233.github.io/img/wechat_pay.png" alt="wechat_pay"></a>
+                        <p>微信</p>
+                    </div>
+                    <div id="alipay" style="display: inline-block">
+                        <a class="fancybox" rel="group">
+                            <img id="alipay_qr" src="https://tang2233.github.io/img/alipay.jpg" alt="alipay"></a>
+                        <p>支付宝</p>
+                    </div>
+                </div>
+                <button id="rewardButton"
+                        onclick="
+                    var qr = document.getElementById('QR');
+                    if (qr.style.opacity === '0') {
+                        qr.style.opacity='1';
+                    } else {
+                        qr.style.opacity='0'
+                    }"
+                >
+                    <span>🧧 鼓励</span>
+                </button>
+            </div>
+        </div>
+
+        <footer class="post-footer">
+            
+<nav class="paginav">
+  <a class="next" href="https://tang2233.github.io/posts/lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+    <span class="title">下一页 »</span>
+    <br>
+    <span>Lambda表达式</span>
+  </a>
+</nav>
+
+        </footer>
+    </div>
+
+<style>
+    .comments_details summary::marker {
+        font-size: 20px;
+        content: '👉展开评论';
+        color: var(--content);
+    }
+    .comments_details[open] summary::marker{
+        font-size: 20px;
+        content: '👇关闭评论';
+        color: var(--content);
+    }
+</style>
+
+
+<div>
+    <details class="comments_details">
+        <summary style="cursor: pointer; margin: 50px 0 20px 0;width: 130px;">
+            <span style="font-size: 20px;color: var(--content);">...</span>
+        </summary>
+        <div id="tcomment"></div>
+    </details>
+    <script src="https://cdn.staticfile.org/twikoo/1.5.8/twikoo.all.min.js">
+    </script>
+    <script>
+        twikoo.init({
+            envId:  null ,
+        el: "#tcomment",
+            lang: 'zh-CN',
+            region:  null ,
+        path: window.TWIKOO_MAGIC_PATH||window.location.pathname,
+        })
+    </script>
+</div>
+</article>
+</main>
+
+<footer class="footer">
+    <span>
+        Copyright
+        &copy;
+        2023-2024
+        <a href="https://tang2233.github.io/" style="color:#939393;">Tang2233&#39;s Blog</a>
+        
+    
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <span class="topInner">
+        <svg class="topSvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+            <path d="M12 6H0l6-6z"/>
+        </svg>
+        <span id="read_progress"></span>
+    </span>
+</a>
+
+<script>
+    document.addEventListener('scroll', function (e) {
+        const readProgress = document.getElementById("read_progress");
+        const scrollHeight = document.documentElement.scrollHeight;
+        const clientHeight = document.documentElement.clientHeight;
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        readProgress.innerText = ((scrollTop / (scrollHeight - clientHeight)).toFixed(2) * 100).toFixed(0);
+    })
+</script>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+</script>
+<script>
+    let mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        (function() {
+            document.cookie = "change-themes" + "="+ escape ("false");
+        })()
+
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    });
+</script>
+
+<script>
+    document.body.addEventListener('copy', function (e) {
+        if (window.getSelection().toString() && window.getSelection().toString().length > 50) {
+            let clipboardData = e.clipboardData || window.clipboardData;
+            if (clipboardData) {
+                e.preventDefault();
+                let htmlData = window.getSelection().toString() +
+                    '\r\n\n————————————————\r\n' +
+                    '版权声明：本文为「'+"Tang2233's Blog"+'」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。' +
+                '\r\n原文链接：' + location.href;
+                let textData = window.getSelection().toString() +
+                    '\r\n\n————————————————\r\n' +
+                    '版权声明：本文为「'+"Tang2233's Blog"+'」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。' +
+                '\r\n原文链接：' + location.href;
+                clipboardData.setData('text/html', htmlData);
+                clipboardData.setData('text/plain', textData);
+            }
+        }
+    });
+</script>
+<script>
+    document.querySelectorAll('pre > code').forEach((codeblock) => {
+        const container = codeblock.parentNode.parentNode;
+        const copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerText = '复制';
+
+        function copyingDone() {
+            copybutton.innerText = '已复制！';
+            setTimeout(() => {
+                copybutton.innerText = '复制';
+            }, 2000);
+        }
+
+        copybutton.addEventListener('click', (cb) => {
+            if ('clipboard' in navigator) {
+                let text = codeblock.textContent +
+                    '\r\n————————————————\r\n' +
+                    '版权声明：本文为「'+"Tang2233's Blog"+'」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。' +
+                '\r\n原文链接：' + location.href;
+                navigator.clipboard.writeText(text);
+                copyingDone();
+                return;
+            }
+
+            const range = document.createRange();
+            range.selectNodeContents(codeblock);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try {
+                document.execCommand('copy');
+                copyingDone();
+            } catch (e) {}
+            selection.removeRange(range);
+        });
+
+        let language = codeblock.className.replaceAll("language-", "")
+        let macTool = document.createElement("div")
+        let macTool1 = document.createElement("div")
+        let macTool2 = document.createElement("div")
+        let macTool3 = document.createElement("div")
+        let languageType = document.createElement("div")
+        languageType.innerText = language
+        macTool.setAttribute('class', 'mac-tool')
+        macTool1.setAttribute('class', 'mac bb1')
+        macTool2.setAttribute('class', 'mac bb2')
+        macTool3.setAttribute('class', 'mac bb3')
+        languageType.setAttribute('class', 'language-type')
+        macTool.appendChild(macTool1)
+        macTool.appendChild(macTool2)
+        macTool.appendChild(macTool3)
+        macTool.appendChild(languageType)
+
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+            container.appendChild(macTool)
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+            container.appendChild(macTool)
+        } else {
+            
+            codeblock.parentNode.appendChild(copybutton);
+            container.appendChild(macTool)
+        }
+    });
+</script>
+</body>
+
+</html>
