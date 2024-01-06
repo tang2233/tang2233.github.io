@@ -6,7 +6,16 @@
     <description>Recent content in C# on Tang2233&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 05 Jan 2024 15:13:12 +0800</lastBuildDate><atom:link href="https://tang2233.github.io/categories/c#/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Jan 2024 17:56:45 +0800</lastBuildDate><atom:link href="https://tang2233.github.io/categories/c#/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LINQ及其常用方法</title>
+      <link>https://tang2233.github.io/posts/linq%E5%8F%8A%E5%85%B6%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Sat, 06 Jan 2024 17:56:45 +0800</pubDate>
+      
+      <guid>https://tang2233.github.io/posts/linq%E5%8F%8A%E5%85%B6%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <description>什么是 LINQ？ LINQ (Language Integrated Query)，语言集成查询，是一种使用类似 SQL 语句操作多种数据源的功能。我们可以</description>
+    </item>
+    
     <item>
       <title>CSharp委托与事件</title>
       <link>https://tang2233.github.io/posts/csharp%E5%A7%94%E6%89%98%E4%B8%8E%E4%BA%8B%E4%BB%B6/</link>
