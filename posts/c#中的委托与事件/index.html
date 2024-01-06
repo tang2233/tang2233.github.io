@@ -5,11 +5,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>C#中的扩展方法 | Tang2233&#39;s Blog</title>
-<meta name="keywords" content="扩展方法">
-<meta name="description" content="什么是扩展方法？ 扩展方法是一种特殊的静态方法，但我们可以像实例方法一样调用它们。这使我们能够向现有类">
+<title>C#中的委托与事件 | Tang2233&#39;s Blog</title>
+<meta name="keywords" content="委托, 事件">
+<meta name="description" content="C# 委托 委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实">
 <meta name="author" content="Tang2233">
-<link rel="canonical" href="https://tang2233.github.io/posts/csharp%E7%9A%84%E6%89%A9%E5%B1%95%E6%96%B9%E6%B3%95/">
+<link rel="canonical" href="https://tang2233.github.io/posts/c#%E4%B8%AD%E7%9A%84%E5%A7%94%E6%89%98%E4%B8%8E%E4%BA%8B%E4%BB%B6/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.js" onload="hljs.initHighlightingOnLoad();"></script>
 <link rel="icon" href="https://tang2233.github.io/favicon/favicon.ico">
@@ -72,16 +72,16 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-<meta property="og:title" content="C#中的扩展方法" />
-<meta property="og:description" content="什么是扩展方法？ 扩展方法是一种特殊的静态方法，但我们可以像实例方法一样调用它们。这使我们能够向现有类" />
+<meta property="og:title" content="C#中的委托与事件" />
+<meta property="og:description" content="C# 委托 委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://tang2233.github.io/posts/csharp%E7%9A%84%E6%89%A9%E5%B1%95%E6%96%B9%E6%B3%95/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-01-06T19:36:54+08:00" />
-<meta property="article:modified_time" content="2024-01-06T19:36:54+08:00" />
+<meta property="og:url" content="https://tang2233.github.io/posts/c#%E4%B8%AD%E7%9A%84%E5%A7%94%E6%89%98%E4%B8%8E%E4%BA%8B%E4%BB%B6/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-01-05T15:13:12+08:00" />
+<meta property="article:modified_time" content="2024-01-05T15:13:12+08:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="C#中的扩展方法"/>
-<meta name="twitter:description" content="什么是扩展方法？ 扩展方法是一种特殊的静态方法，但我们可以像实例方法一样调用它们。这使我们能够向现有类"/>
+<meta name="twitter:title" content="C#中的委托与事件"/>
+<meta name="twitter:description" content="C# 委托 委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实"/>
 
 
 <script type="application/ld+json">
@@ -99,8 +99,8 @@ var _hmt = _hmt || [];
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "C#中的扩展方法",
-      "item": "https://tang2233.github.io/posts/csharp%E7%9A%84%E6%89%A9%E5%B1%95%E6%96%B9%E6%B3%95/"
+      "name": "C#中的委托与事件",
+      "item": "https://tang2233.github.io/posts/c#%E4%B8%AD%E7%9A%84%E5%A7%94%E6%89%98%E4%B8%8E%E4%BA%8B%E4%BB%B6/"
     }
   ]
 }
@@ -109,24 +109,24 @@ var _hmt = _hmt || [];
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "C#中的扩展方法",
-  "name": "C#中的扩展方法",
-  "description": "什么是扩展方法？ 扩展方法是一种特殊的静态方法，但我们可以像实例方法一样调用它们。这使我们能够向现有类",
+  "headline": "C#中的委托与事件",
+  "name": "C#中的委托与事件",
+  "description": "C# 委托 委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实",
   "keywords": [
-    "扩展方法"
+    "委托", "事件"
   ],
-  "articleBody": "什么是扩展方法？ 扩展方法是一种特殊的静态方法，但我们可以像实例方法一样调用它们。这使我们能够向现有类型添加新的方法，而无需修改、继承或重新编译原始类型。\n如何创建扩展方法？ 静态类：扩展方法必须在静态类中定义； 静态方法：扩展方法必须是静态方法； 第一个参数：扩展方法必须以关键字 this 修饰的第一个参数开始，该参数定义了被扩展的类型。 public static class StringExtension { public static string ToLowerFirstLetter(this string str) { if (string.IsNullOrEmpty(str) || char.IsLower(str, 0)) return str; return char.ToLowerInvariant(str[0]) + str.Substring(1); } } 在上述代码中，我们为 string 类型添加了一个名为 ToLowerFirstLetter 的扩展方法，该方法将字符串的首字母转换为小写。\n如何使用扩展方法？ string str = \"Hello, World!\"; string result = str.ToLowerFirstLetter(); 在上述代码中，我们像调用实例方法一样调用了扩展方法 ToLowerFirstLetter。\n",
-  "wordCount" : "292",
+  "articleBody": "C# 委托 委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实例与任何具有兼容签名和返回类型的方法相关联。 你可以通过委托实例调用方法。\n特点 委托类似于 C++函数指针，但与指针不同的是，委托是完全面向对象的，是安全的数据类型。 委托允许将方法作为参数进行传递。 委托可用于定义回调方法。 委托可以把多个方法链接在一起。这样，在事件触发时可同时启动多个事件处理程序。 委托签名不需要与方法精确匹配。 C# 四种委托的异同？ delegate ,至少 0 个参数，至多 32 个参数，可以无返回值，可以指定返回值类型。 Action ,至少 0 个参数，无返回值的泛型委托。 Func ,至少 0 个参数，至多 16 个参数，必须有返回值的泛型委托。 Predicate ,有且只有一个参数，返回值只为 bool 类型。 // 声明委托 public delegate void MyDelegate(string message); // 使用委托 public void UseDelegate() { MyDelegate del = new MyDelegate(Method); del(\"Hello World\"); } // 被委托引用的方法 public void Method(string message) { Console.WriteLine(message); } 参考文章\n委托（C# 编程指南） C#四种委托的区别 C# 事件 类或对象可以通过事件向其他类或对象通知发生的相关事情。发送（或引发）事件的类称为“发布者”，接收（或处理）事件的类称为“订阅者”。事件是一种特殊的委托。\n// 声明事件 public event MyDelegate MyEvent; // 触发事件 public void TriggerEvent() { MyEvent?.Invoke(\"Event triggered\"); } // 订阅事件 public void Subscribe() { MyEvent += Method; } // 取消订阅 public void Unsubscribe() { MyEvent -= Method; } ",
+  "wordCount" : "512",
   "inLanguage": "zh",
-  "datePublished": "2024-01-06T19:36:54+08:00",
-  "dateModified": "2024-01-06T19:36:54+08:00",
+  "datePublished": "2024-01-05T15:13:12+08:00",
+  "dateModified": "2024-01-05T15:13:12+08:00",
   "author":[{
     "@type": "Person",
     "name": "Tang2233"
   }],
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://tang2233.github.io/posts/csharp%E7%9A%84%E6%89%A9%E5%B1%95%E6%96%B9%E6%B3%95/"
+    "@id": "https://tang2233.github.io/posts/c#%E4%B8%AD%E7%9A%84%E5%A7%94%E6%89%98%E4%B8%8E%E4%BA%8B%E4%BB%B6/"
   },
   "publisher": {
     "@type": "Organization",
@@ -242,7 +242,7 @@ var _hmt = _hmt || [];
 		<header class="post-header">
 			<div class="breadcrumbs"><a href="https://tang2233.github.io/">🏠 主页</a>&nbsp;»&nbsp;<a href="https://tang2233.github.io/posts/">Posts</a></div>
 			<h1 class="post-title">
-				C#中的扩展方法
+				C#中的委托与事件
 			</h1>
 			<div class="post-meta">
 
@@ -263,7 +263,7 @@ var _hmt = _hmt || [];
 <span class="parent-post-meta">
     <span id="post_meta_style_1">
         <span class="fa fa-calendar-check-o"></span>
-        <span>2024-01-06
+        <span>2024-01-05
             &nbsp;&nbsp;
         </span>
     </span>
@@ -276,13 +276,13 @@ var _hmt = _hmt || [];
     
     <span id="post_meta_style_3">
         <span class="fa fa-file-word-o"></span>
-        <span>292字
+        <span>512字
             &nbsp;&nbsp;
         </span>
     </span>
     <span id="post_meta_style_4">
         <span class="fa fa-clock-o"></span>
-        <span>1分钟
+        <span>2分钟
             &nbsp;&nbsp;
         </span>
     </span>
@@ -296,7 +296,8 @@ var _hmt = _hmt || [];
         <span class="fa fa-tags" style="opacity: 0.8"></span>
         <span>
             <span class="post-tags-meta">
-                <a href="https://tang2233.github.io/tags/%E6%89%A9%E5%B1%95%E6%96%B9%E6%B3%95/" style="color: var(--secondary)!important;">扩展方法</a>
+                <a href="https://tang2233.github.io/tags/%E5%A7%94%E6%89%98/" style="color: var(--secondary)!important;">委托</a>
+                &nbsp;<a href="https://tang2233.github.io/tags/%E4%BA%8B%E4%BB%B6/" style="color: var(--secondary)!important;">事件</a>
             </span>
         </span>
     </span>
@@ -349,11 +350,15 @@ var _hmt = _hmt || [];
 
         <div class="inner"><ul>
                 <li>
-                    <a href="#%e4%bb%80%e4%b9%88%e6%98%af%e6%89%a9%e5%b1%95%e6%96%b9%e6%b3%95" aria-label="什么是扩展方法？">什么是扩展方法？</a></li>
+                    <a href="#c-%e5%a7%94%e6%89%98" aria-label="C# 委托">C# 委托</a><ul>
+                        
                 <li>
-                    <a href="#%e5%a6%82%e4%bd%95%e5%88%9b%e5%bb%ba%e6%89%a9%e5%b1%95%e6%96%b9%e6%b3%95" aria-label="如何创建扩展方法？">如何创建扩展方法？</a></li>
+                    <a href="#%e7%89%b9%e7%82%b9" aria-label="特点">特点</a></li>
                 <li>
-                    <a href="#%e5%a6%82%e4%bd%95%e4%bd%bf%e7%94%a8%e6%89%a9%e5%b1%95%e6%96%b9%e6%b3%95" aria-label="如何使用扩展方法？">如何使用扩展方法？</a>
+                    <a href="#c-%e5%9b%9b%e7%a7%8d%e5%a7%94%e6%89%98%e7%9a%84%e5%bc%82%e5%90%8c" aria-label="C# 四种委托的异同？">C# 四种委托的异同？</a></li></ul>
+                </li>
+                <li>
+                    <a href="#c-%e4%ba%8b%e4%bb%b6" aria-label="C# 事件">C# 事件</a>
                 </li>
             </ul>
         </div>
@@ -420,30 +425,66 @@ var _hmt = _hmt || [];
         return rect.top + win.pageYOffset;
     }
 </script>
-		<div class="post-content"><h1 id="什么是扩展方法">什么是扩展方法？<a hidden class="anchor" aria-hidden="true" href="#什么是扩展方法">#</a></h1>
-<p>扩展方法是一种特殊的静态方法，但我们可以像实例方法一样调用它们。这使我们能够向现有类型添加新的方法，而无需修改、继承或重新编译原始类型。</p>
-<h1 id="如何创建扩展方法">如何创建扩展方法？<a hidden class="anchor" aria-hidden="true" href="#如何创建扩展方法">#</a></h1>
+		<div class="post-content"><h1 id="c-委托">C# 委托<a hidden class="anchor" aria-hidden="true" href="#c-委托">#</a></h1>
+<p>委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实例与任何具有兼容签名和返回类型的方法相关联。 你可以通过委托实例调用方法。</p>
+<h2 id="特点">特点<a hidden class="anchor" aria-hidden="true" href="#特点">#</a></h2>
 <ol>
-<li><strong>静态类</strong>：扩展方法必须在静态类中定义；</li>
-<li><strong>静态方法</strong>：扩展方法必须是静态方法；</li>
-<li><strong>第一个参数</strong>：扩展方法必须以关键字 <code>this</code> 修饰的第一个参数开始，该参数定义了被扩展的类型。</li>
+<li>委托类似于 C++函数指针，但与指针不同的是，委托是完全面向对象的，是安全的数据类型。</li>
+<li>委托允许将方法作为参数进行传递。</li>
+<li>委托可用于定义回调方法。</li>
+<li>委托可以把多个方法链接在一起。这样，在事件触发时可同时启动多个事件处理程序。</li>
+<li>委托签名不需要与方法精确匹配。</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">StringExtension</span>
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">string</span> ToLowerFirstLetter(<span style="color:#66d9ef">this</span> <span style="color:#66d9ef">string</span> str)
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">string</span>.IsNullOrEmpty(str) || <span style="color:#66d9ef">char</span>.IsLower(str, <span style="color:#ae81ff">0</span>))
-</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> str;
+<h2 id="c-四种委托的异同">C# 四种委托的异同？<a hidden class="anchor" aria-hidden="true" href="#c-四种委托的异同">#</a></h2>
+<ol>
+<li>delegate ,至少 0 个参数，至多 32 个参数，可以无返回值，可以指定返回值类型。</li>
+<li>Action ,至少 0 个参数，无返回值的泛型委托。</li>
+<li>Func ,至少 0 个参数，至多 16 个参数，必须有返回值的泛型委托。</li>
+<li>Predicate ,有且只有一个参数，返回值只为 bool 类型。</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// 声明委托</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">delegate</span> <span style="color:#66d9ef">void</span> MyDelegate(<span style="color:#66d9ef">string</span> message);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">char</span>.ToLowerInvariant(str[<span style="color:#ae81ff">0</span>]) + str.Substring(<span style="color:#ae81ff">1</span>);
-</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 使用委托</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> UseDelegate()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    MyDelegate del = <span style="color:#66d9ef">new</span> MyDelegate(Method);
+</span></span><span style="display:flex;"><span>    del(<span style="color:#e6db74">&#34;Hello World&#34;</span>);
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>在上述代码中，我们为 <code>string</code> 类型添加了一个名为 <code>ToLowerFirstLetter</code> 的扩展方法，该方法将字符串的首字母转换为小写。</p>
-<h1 id="如何使用扩展方法">如何使用扩展方法？<a hidden class="anchor" aria-hidden="true" href="#如何使用扩展方法">#</a></h1>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> str = <span style="color:#e6db74">&#34;Hello, World!&#34;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">string</span> result = str.ToLowerFirstLetter();
-</span></span></code></pre></div><p>在上述代码中，我们像调用实例方法一样调用了扩展方法 <code>ToLowerFirstLetter</code>。</p>
-
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 被委托引用的方法</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> Method(<span style="color:#66d9ef">string</span> message)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    Console.WriteLine(message);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>参考文章</p>
+<ol>
+<li><a href="https://docs.microsoft.com/zh-cn/dotnet/csharp/programming-guide/delegates/">委托（C# 编程指南）</a></li>
+<li><a href="https://blog.csdn.net/qq_39024280/article/details/122814391">C#四种委托的区别</a></li>
+</ol>
+<h1 id="c-事件">C# 事件<a hidden class="anchor" aria-hidden="true" href="#c-事件">#</a></h1>
+<p>类或对象可以通过事件向其他类或对象通知发生的相关事情。发送（或引发）事件的类称为“发布者”，接收（或处理）事件的类称为“订阅者”。事件是一种特殊的委托。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#75715e">// 声明事件</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">event</span> MyDelegate MyEvent;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 触发事件</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> TriggerEvent()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    MyEvent?.Invoke(<span style="color:#e6db74">&#34;Event triggered&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 订阅事件</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> Subscribe()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    MyEvent += Method;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 取消订阅</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> Unsubscribe()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    MyEvent -= Method;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
 
 		</div>
 		<div class="post-reward">
@@ -492,10 +533,15 @@ var _hmt = _hmt || [];
 		<footer class="post-footer">
 			
 <nav class="paginav">
-  <a class="next" href="https://tang2233.github.io/posts/linq%E5%8F%8A%E5%85%B6%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/">
-    <span class="title">下一页 »</span>
+  <a class="prev" href="https://tang2233.github.io/posts/linq%E5%8F%8A%E5%85%B6%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/">
+    <span class="title">« 上一页</span>
     <br>
     <span>LINQ及其常用方法</span>
+  </a>
+  <a class="next" href="https://tang2233.github.io/posts/c#%E4%B8%AD%E7%9A%84%E5%85%B3%E9%94%AE%E5%AD%97/">
+    <span class="title">下一页 »</span>
+    <br>
+    <span>C#中的关键字</span>
   </a>
 </nav>
 
