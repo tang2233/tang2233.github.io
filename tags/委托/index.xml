@@ -9,10 +9,10 @@
     <lastBuildDate>Fri, 05 Jan 2024 15:13:12 +0800</lastBuildDate><atom:link href="https://tang2233.github.io/tags/%E5%A7%94%E6%89%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CSharp委托与事件</title>
-      <link>https://tang2233.github.io/posts/csharp%E5%A7%94%E6%89%98%E4%B8%8E%E4%BA%8B%E4%BB%B6/</link>
+      <link>https://tang2233.github.io/posts/c#%E4%B8%AD%E7%9A%84%E5%A7%94%E6%89%98%E4%B8%8E%E4%BA%8B%E4%BB%B6/</link>
       <pubDate>Fri, 05 Jan 2024 15:13:12 +0800</pubDate>
       
-      <guid>https://tang2233.github.io/posts/csharp%E5%A7%94%E6%89%98%E4%B8%8E%E4%BA%8B%E4%BB%B6/</guid>
+      <guid>https://tang2233.github.io/posts/c#%E4%B8%AD%E7%9A%84%E5%A7%94%E6%89%98%E4%B8%8E%E4%BA%8B%E4%BB%B6/</guid>
       <description>C# 委托 委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实</description>
     </item>
     
