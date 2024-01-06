@@ -230,21 +230,21 @@ var _hmt = _hmt || [];
 </header>
 <main class="main page">
 <style>
-    i[id*="post_meta_style"] {
-        display: flex;
-        align-items: center;
-        margin: 0 0 10px 0;
-    }
+	i[id*="post_meta_style"] {
+		display: flex;
+		align-items: center;
+		margin: 0 0 10px 0;
+	}
 </style>
 
 <article class="post-single">
-    <div id="single-content">
-        <header class="post-header">
-            <div class="breadcrumbs"><a href="https://tang2233.github.io/">🏠 主页</a>&nbsp;»&nbsp;<a href="https://tang2233.github.io/posts/">Posts</a></div>
-            <h1 class="post-title">
-                CSharp委托与事件
-            </h1>
-            <div class="post-meta">
+	<div id="single-content">
+		<header class="post-header">
+			<div class="breadcrumbs"><a href="https://tang2233.github.io/">🏠 主页</a>&nbsp;»&nbsp;<a href="https://tang2233.github.io/posts/">Posts</a></div>
+			<h1 class="post-title">
+				CSharp委托与事件
+			</h1>
+			<div class="post-meta">
 
 <style>
     i[id*="post_meta_style"] {
@@ -302,51 +302,50 @@ var _hmt = _hmt || [];
         </span>
     </span>
 </span>
-<span style="opacity: 0.8;">
-                    <span id="post_meta_style_7">
-                        &nbsp;&nbsp;
-                        <span class="fa fa-eye" ></span>
-                    </span>
-                    <span id="post_meta_style_8">
-                        <span class="fa fa-commenting-o"></span>
-                        <span>
-                            <script src="https://cdn.staticfile.org/twikoo/1.5.8/twikoo.all.min.js"></script>
-                            <script>
-                                let url = document.documentURI
-                                
-                                let dnsUrl = "https://tang2233.github.io/"
-                                let urlSplit = url.split(dnsUrl)
-                                let finalUrl = urlSplit[1]
-                                if (finalUrl[0] !== '/') {
-                                    finalUrl = '/'+finalUrl
-                                }
-                                twikoo.getCommentsCount({
-                                    envId:  null , 
-                                region:  null , 
-                                urls: [ 
-                                    
-                                    finalUrl,
-                                ],
-                                    includeReply: false 
-                                }).then(function (res) {
-                                    let count = res[0].count
-                                    const obj = document.getElementById("comment_count");
-                                    obj.innerText = count
-                                    
-                                    
-                                    
-                                }).catch(function (err) {
-                                    
-                                    console.error(err);
-                                });
-                            </script>
-                            <span id="comment_count"></span>
-                        </span>
-                    </span>
-                </span>
+<span style="opacity: 0.8">
+					<span id="post_meta_style_7">
+						&nbsp;&nbsp;
+						<span class="fa fa-eye"></span>
+					</span>
+					<span id="post_meta_style_8">
+						<span>
+							<script src="https://cdn.staticfile.org/twikoo/1.5.8/twikoo.all.min.js"></script>
+							<script>
+								let url = document.documentURI
+								
+								let dnsUrl = "https://tang2233.github.io/"
+								let urlSplit = url.split(dnsUrl)
+								let finalUrl = urlSplit[1]
+								if (finalUrl[0] !== '/') {
+								    finalUrl = '/'+finalUrl
+								}
+								twikoo.getCommentsCount({
+								    envId:  null , 
+								region:  null , 
+								urls: [ 
+								    
+								    finalUrl,
+								],
+								    includeReply: false 
+								}).then(function (res) {
+								    let count = res[0].count
+								    const obj = document.getElementById("comment_count");
+								    obj.innerText = count
+								    
+								    
+								    
+								}).catch(function (err) {
+								    
+								    console.error(err);
+								});
+							</script>
+							<span id="comment_count"></span>
+						</span>
+					</span>
+				</span>
 
 </div>
-        </header> <aside id="toc-container" class="toc-container wide">
+		</header> <aside id="toc-container" class="toc-container wide">
     <div class="toc">
         <details  open>
         <summary accesskey="c" title="(Alt + C)">
@@ -430,7 +429,7 @@ var _hmt = _hmt || [];
         return rect.top + win.pageYOffset;
     }
 </script>
-        <div class="post-content"><h1 id="c-委托">C# 委托<a hidden class="anchor" aria-hidden="true" href="#c-委托">#</a></h1>
+		<div class="post-content"><h1 id="c-委托">C# 委托<a hidden class="anchor" aria-hidden="true" href="#c-委托">#</a></h1>
 <p>委托是一种引用类型，表示对具有特定参数列表和返回类型的方法的引用。 在实例化委托时，你可以将其实例与任何具有兼容签名和返回类型的方法相关联。 你可以通过委托实例调用方法。</p>
 <h2 id="特点">特点<a hidden class="anchor" aria-hidden="true" href="#特点">#</a></h2>
 <ol>
@@ -491,37 +490,52 @@ var _hmt = _hmt || [];
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div>
 
-        </div>
-        <div class="post-reward">
-            <div style="padding: 0 0 0 0; margin: 0 0 0 0; width: 100%; font-size:16px; text-align: center;">
-                <div id="QR" style="opacity: 0;">
-                    <div id="wechat" style="display: inline-block">
-                        <a class="fancybox" rel="group">
-                            <img id="wechat_qr" src="https://tang2233.github.io/img/wechat_pay.png" alt="wechat_pay"></a>
-                        <p>微信</p>
-                    </div>
-                    <div id="alipay" style="display: inline-block">
-                        <a class="fancybox" rel="group">
-                            <img id="alipay_qr" src="https://tang2233.github.io/img/alipay.jpg" alt="alipay"></a>
-                        <p>支付宝</p>
-                    </div>
-                </div>
-                <button id="rewardButton"
-                        onclick="
+		</div>
+		<div class="post-reward">
+			<div
+				style="
+					padding: 0 0 0 0;
+					margin: 0 0 0 0;
+					width: 100%;
+					font-size: 16px;
+					text-align: center;
+				">
+				<div id="QR" style="opacity: 0">
+					<div id="wechat" style="display: inline-block">
+						<a class="fancybox" rel="group">
+							<img
+								id="wechat_qr"
+								src="https://tang2233.github.io/img/wechat_pay.png"
+								alt="wechat_pay"
+						/></a>
+						<p>微信</p>
+					</div>
+					<div id="alipay" style="display: inline-block">
+						<a class="fancybox" rel="group">
+							<img
+								id="alipay_qr"
+								src="https://tang2233.github.io/img/alipay.jpg"
+								alt="alipay"
+						/></a>
+						<p>支付宝</p>
+					</div>
+				</div>
+				<button
+					id="rewardButton"
+					onclick="
                     var qr = document.getElementById('QR');
                     if (qr.style.opacity === '0') {
                         qr.style.opacity='1';
                     } else {
                         qr.style.opacity='0'
-                    }"
-                >
-                    <span>🧧 鼓励</span>
-                </button>
-            </div>
-        </div>
+                    }">
+					<span>🧧 鼓励</span>
+				</button>
+			</div>
+		</div>
 
-        <footer class="post-footer">
-            
+		<footer class="post-footer">
+			
 <nav class="paginav">
   <a class="prev" href="https://tang2233.github.io/posts/linq%E5%8F%8A%E5%85%B6%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/">
     <span class="title">« 上一页</span>
@@ -535,8 +549,8 @@ var _hmt = _hmt || [];
   </a>
 </nav>
 
-        </footer>
-    </div>
+		</footer>
+	</div>
 
 <style>
     .comments_details summary::marker {
