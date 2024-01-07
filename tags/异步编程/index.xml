@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>异步编程 on Tang2233&#39;s Blog</title>
+    <link>https://tang2233.github.io/tags/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/</link>
+    <description>Recent content in 异步编程 on Tang2233&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Sun, 07 Jan 2024 17:25:16 +0800</lastBuildDate><atom:link href="https://tang2233.github.io/tags/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSharp之异步编程</title>
+      <link>https://tang2233.github.io/posts/csharp%E4%B9%8B%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/</link>
+      <pubDate>Sun, 07 Jan 2024 17:25:16 +0800</pubDate>
+      
+      <guid>https://tang2233.github.io/posts/csharp%E4%B9%8B%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B/</guid>
+      <description>异步编程概念 异步编程是一种编程模式，它允许程序在等待某些操作完成时继续执行其他代码。在 C# 中，异步编程</description>
+    </item>
+    
+  </channel>
+</rss>
